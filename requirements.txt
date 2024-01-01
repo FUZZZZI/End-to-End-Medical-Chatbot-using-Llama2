@@ -1,8 +1,8 @@
-ctransformers==0.2.5                    #to lead the quantized model in CPU
+ctransformers==0.2.5                    #to load the quantized model in CPU
 sentence-transformers==2.2.2            #for embedding using huggingface (open source)
 pinecone-client                         #for vectordb
 langchain==0.0.225
 flask
 pypdf
 python-dotenv
--e .
+# -e .
