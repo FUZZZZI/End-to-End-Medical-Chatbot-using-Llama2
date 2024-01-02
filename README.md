@@ -1,5 +1,15 @@
 # End-to-end-Medical-Chatbot-using-Llama2
 
+```ini
+
+Key Differences:
+
+Execution:              INI code is for reference, while Bash code is for execution.
+Functionality:          INI code presents information, while Bash code performs actions.
+Syntax Highlighting:    Markdown renderers apply different highlighting styles.
+```
+
+
 # How to run?
 ### STEPS:
 

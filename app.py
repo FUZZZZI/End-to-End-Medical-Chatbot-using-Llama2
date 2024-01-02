@@ -15,7 +15,7 @@ load_dotenv()
 
 PINECONE_API_KEY = os.environ.get('PINECONE_API_KEY')
 PINECONE_API_ENV = os.environ.get('PINECONE_API_ENV')
-
+INDEX = os.environ.get("index")
 
 embeddings = download_hugging_face_embeddings()
 
@@ -23,7 +23,7 @@ embeddings = download_hugging_face_embeddings()
 pinecone.init(api_key=PINECONE_API_KEY,
               environment=PINECONE_API_ENV)
 
-index_name="medical-bot"
+index_name=INDEX
 
 #Loading the index
 docsearch=Pinecone.from_existing_index(index_name, embeddings)
@@ -33,7 +33,7 @@ PROMPT=PromptTemplate(template=prompt_template, input_variables=["context", "que
 
 chain_type_kwargs={"prompt": PROMPT}
 
-llm=CTransformers(model="model/llama-2-7b-chat.ggmlv3.q4_0.bin",
+llm=CTransformers(model="model/llama-2-7b-chat.ggmlv3.q4_0.bin",            #4bit model
                   model_type="llama",
                   config={'max_new_tokens':512,
                           'temperature':0.8})

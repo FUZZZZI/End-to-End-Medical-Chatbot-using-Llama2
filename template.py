@@ -14,7 +14,8 @@ list_of_files = [
     "research/trials.ipynb",
     "app.py",
     "store_index.py",
-    "static/.gitkeep",
+   #  "static/.gitkeep",           #.gitkeep is a dummy file created because any folder can't be created as empty directory
+    "static/style.css",
     "templates/chat.html"
 
 ]
